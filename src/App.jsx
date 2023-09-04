@@ -1,12 +1,23 @@
-function App() {
+import {
+  Care,
+  Footer,
+  Hero,
+  Products,
+  Reference,
+  Services,
+} from "./components";
 
+function App() {
   return (
     <>
-      <p className="text-4xl">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Hero />
+      <Services />
+      <Products />
+      <Reference />
+      <Care />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
