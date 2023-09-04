@@ -6,39 +6,15 @@ import heroImage from "../../assets/hero-image.svg";
 import logo from "../../assets/logo.svg";
 import cartIcon from "../../assets/cart-icon.svg";
 import searchIcon from "../../assets/search-icon.svg";
-
+import { NavLink } from "../../components";
 import { heroTitle, heroSubtitle } from "../../data";
-
-// import FadeIn from "../components/FadeIn";
-import {NavLink} from "../../components";
 
 // react icons
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
-// hooks
-import useFadeIn from "../../hooks/useFadeIn"; // Make sure to import the hook from the correct path
-
 const Hero = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const titleAnimation = useFadeIn({
-    delay: 0.2,
-    direction: "down",
-    padding: true,
-    fullWidth: true,
-  });
-  const subtitleAnimation = useFadeIn({
-    delay: 0.4,
-    direction: "down",
-    padding: true,
-    fullWidth: true,
-  });
-  const inputAnimation = useFadeIn({
-    delay: 0.2,
-    direction: "up",
-    padding: true,
-    fullWidth: true,
-  });
 
   return (
     <div
@@ -99,36 +75,62 @@ const Hero = () => {
         </div>
       </div>
 
-      <motion.h1
-        {...titleAnimation}
-        className="mt-[90px] text-center text-5xl leading-tight xs:text-[64px] text-white max-w-[1050px]"
-      >
-        {heroTitle}
-      </motion.h1>
-      <motion.h5
-        {...subtitleAnimation}
-        className="mt-6 text-center text-lg xs:text-xl text-white max-w-[500px]"
-      >
-        {heroSubtitle}
-      </motion.h5>
-      <motion.div
-        {...inputAnimation}
-        className="relative w-full xs:w-[460px] mt-11"
-      >
-        <div className="relative w-full xs:w-[460px] mt-11">
-          <input
-            type="text"
-            placeholder="Search"
-            className="rounded-full w-full pl-6 pr-[68px] py-4 bg-primary outline-none text-white
-              text-base xs:text-lg placeholder-white"
-          />
-          <img
-            src={searchIcon}
-            alt=""
-            className="absolute top-2/4 -translate-y-2/4 right-3 h-11 w-11 cursor-pointer"
-          />
-        </div>
-      </motion.div>
+      <div className="flex flex-col justify-center items-center px-10">
+        <motion.h1
+          initial={{
+            opacity: 0,
+            y: "-100%",
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{ duration: 1.4 }}
+          className="mt-[90px] text-center text-6xl leading-tight xs:text-[64px] text-white max-w-[1050px]"
+        >
+          {heroTitle}
+        </motion.h1>
+        <motion.h5
+          initial={{
+            opacity: 0,
+            y: "-150%",
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{ duration: 1.6, delay: 0.3 }}
+          className="mt-8 text-center text-xl xs:text-xl text-white max-w-[500px]"
+        >
+          {heroSubtitle}
+        </motion.h5>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: "200%",
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{ duration: 1.4 }}
+          className="relative w-full xs:w-[460px] mt-11"
+        >
+          <div className="relative w-full xs:w-[460px] mt-3 max-w-[460px] mx-auto">
+            <input
+              type="text"
+              placeholder="Search"
+              className="rounded-full w-full pl-6 pr-[68px] py-4 bg-primary outline-none text-white
+              text-base xs:text-lg placeholder-white bg-slate-500"
+            />
+            <img
+              src={searchIcon}
+              alt=""
+              className="absolute top-2/4 -translate-y-2/4 right-3 h-11 w-11 cursor-pointer"
+            />
+          </div>
+        </motion.div>
+      </div>
 
       <div className="absolute h-[50px] xs:h-[150px] bottom-0 w-full bg-[linear-gradient(180deg,_#ffffff00_0%,_#FFF_100%)]" />
     </div>
