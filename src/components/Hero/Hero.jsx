@@ -13,15 +13,18 @@ import { heroTitle, heroSubtitle } from "../../data";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
+import useIsMedium from "../../hooks/useIsMedium";
+
 const Hero = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const isMobile = useIsMedium();
 
   return (
     <div
       className="h-screen relative flex flex-col items-center"
       style={{
         background: `url(${heroImage})`,
-        backgroundPosition: "bottom",
+        backgroundPosition: isMobile ? "left" : "bottom",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}

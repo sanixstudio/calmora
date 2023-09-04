@@ -1,6 +1,5 @@
-// local imports
 import { services } from "../../data";
-import {FadeIn} from "../../components";
+import { FadeIn } from "../../components";
 
 const Services = () => {
   return (
