@@ -4,6 +4,7 @@ import {
   Hero,
   Products,
   Reference,
+  ScrollToTopButton,
   Services,
 } from "./components";
 
@@ -16,6 +17,7 @@ function App() {
       <Reference />
       <Care />
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

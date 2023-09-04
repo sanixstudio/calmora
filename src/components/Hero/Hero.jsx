@@ -33,7 +33,10 @@ const Hero = () => {
         className="relative w-full max-w-[1490px] flex
         items-center justify-between pt-10 mx-auto px-10"
       >
-        <img src={logo} alt="" />
+        <div className="flex items-center gap-3">
+          <img src={logo} alt="Calmora" />
+          <span className="text-white font-bold text-3xl">Calmora</span>
+        </div>
         <ul className="hidden md:flex items-center gap-10 lg:gap-[68px]">
           <NavLink to="services">Services</NavLink>
           <NavLink to="products">Shop</NavLink>

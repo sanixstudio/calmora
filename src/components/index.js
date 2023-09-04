@@ -6,3 +6,4 @@ export { default as NavLink } from "./NavLink/NavLink";
 export { default as Products } from "./Products/Products";
 export { default as Reference } from "./Reference/Reference";
 export { default as Services } from "./Services/Services";
+export { default as ScrollToTopButton } from "./ScrollToTopButton/ScrollToTopButton";
