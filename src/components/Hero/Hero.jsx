@@ -27,7 +27,7 @@ const Hero = () => {
       }}
     >
       <div
-        className="relative w-full max-w-[1490px] flex 
+        className="relative w-full max-w-[1490px] flex
         items-center justify-between pt-10 mx-auto px-10"
       >
         <img src={logo} alt="" />
@@ -56,7 +56,7 @@ const Hero = () => {
             onClick={() => setShowMobileMenu(false)}
           />
 
-          <ul className="pt-[60px] items-center flex flex-col gap-8">
+          <ul className="pt-[60px] items-center flex flex-col gap-8 max-w-[200px] mx-auto backdrop-blur-2xl">
             <NavLink to="services" mobileMenu>
               Services
             </NavLink>
