@@ -1,5 +1,5 @@
 export { default as Care } from "./Care/Care";
-export { default as FadeIn } from "./FadeIn/FadeIn";
+export { default as AnimateIt } from "./AnimateIt/AnimateIt";
 export { default as Footer } from "./Footer/Footer";
 export { default as Hero } from "./Hero/Hero";
 export { default as NavLink } from "./NavLink/NavLink";

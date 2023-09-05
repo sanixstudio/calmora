@@ -1,27 +1,27 @@
 // local imports
 import { careTitle, careSubtitle, careList } from "../../data";
 import imageFour from "../../assets/image-four.svg";
-import {FadeIn} from "../../components";
+import {AnimateIt} from "../../components";
 
 const Care = () => {
   return (
     <div id="care" className="px-10 max-w-[1490px] mx-auto mb-[160px]">
-      <FadeIn delay={0.2} direction="down">
+      <AnimateIt delay={0.2} direction="down">
         <h1 className="text-5xl lg:text-[64px] font-medium text-fontBlack mb-6 text-center">
           {careTitle}
         </h1>
-      </FadeIn>
+      </AnimateIt>
 
-      <FadeIn delay={0.4} direction="down">
+      <AnimateIt delay={0.4} direction="down">
         <h5 className="text-[#4F4F4F] text-lg xs:text-xl mb-12">
           {careSubtitle}
         </h5>
-      </FadeIn>
+      </AnimateIt>
 
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex flex-col gap-8 items-start">
           {careList.map((item, i) => (
-            <FadeIn key={i} delay={(i + 1) * 0.2} direction="left">
+            <AnimateIt key={i} delay={(i + 1) * 0.2} direction="left">
               <div className="flex flex-row md:flex-row gap-6 items-center xs:items-start">
                 <img
                   src={item.img}
@@ -37,13 +37,13 @@ const Care = () => {
                   </h6>
                 </div>
               </div>
-            </FadeIn>
+            </AnimateIt>
           ))}
         </div>
 
-        <FadeIn delay={0.6} direction="right">
+        <AnimateIt delay={0.6} direction="right">
           <img src={imageFour} alt="plants" />
-        </FadeIn>
+        </AnimateIt>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 // eslint-disable-next-line react/prop-types
-const FadeIn = ({ children, delay, direction, fullWidth, padding }) => {
+const AnimateIt = ({ children, delay, direction, fullWidth, padding }) => {
   const ref = useRef(null);
 
   const isInView = useInView(ref, { once: true });
@@ -50,4 +50,4 @@ const FadeIn = ({ children, delay, direction, fullWidth, padding }) => {
   );
 };
 
-export default FadeIn;
+export default AnimateIt;

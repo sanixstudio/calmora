@@ -1,5 +1,5 @@
 import { services } from "../../data";
-import { FadeIn } from "../../components";
+import { AnimateIt } from "../../components";
 
 const Services = () => {
   return (
@@ -8,7 +8,7 @@ const Services = () => {
       className="mt-[160px] max-w-[1490px] mx-auto px-10 flex flex-col xs:flex-row md:flex-row md:justify-between gap-12 xs:gap-6 xs:justify-between w-full"
     >
       {services.map((service, i) => (
-        <FadeIn key={i} delay={0.2} direction="down">
+        <AnimateIt key={i} delay={0.2} direction="down">
           <div className="flex flex-col lg:flex-row gap-4 w-full items-center">
             <img
               src={service.icon}
@@ -24,7 +24,7 @@ const Services = () => {
               </h6>
             </div>
           </div>
-        </FadeIn>
+        </AnimateIt>
       ))}
     </div>
   );

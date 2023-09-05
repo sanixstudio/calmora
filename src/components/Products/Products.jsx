@@ -1,5 +1,5 @@
 import { productsTitle, productsBtnText, products } from "../../data";
-import { FadeIn } from "../../components";
+import { AnimateIt } from "../../components";
 
 import arrowIcon from "../../assets/arrow-icon.svg";
 import starsIcon from "../../assets/stars-icon.svg";
@@ -12,7 +12,7 @@ const Products = () => {
       id="products"
       className="flex flex-col xl:flex-row gap-[128px] 2xl:gap-2 2xl:justify-between mt-[160px] 2xl:mt-[270px] mb-[160px] max-w-[1490px] mx-auto px-10 w-full"
     >
-      <FadeIn delay={0.2} direction="right">
+      <AnimateIt delay={0.2} direction="right">
         <div className="flex flex-col">
           <h1 className="text-center 2xl:text-start text-fontBlack text-5xl lg:text-[64px] font-medium mb-6">
             {productsTitle}
@@ -28,11 +28,11 @@ const Products = () => {
             <img src={arrowIcon} alt="" />
           </button>
         </div>
-      </FadeIn>
+      </AnimateIt>
 
       <div className="w-full flex flex-col md:flex-row gap-[160px] md:gap-6">
         {products.map((product, i) => (
-          <FadeIn key={i} delay={(i + 1) * 0.2} direction="left" fullWidth>
+          <AnimateIt key={i} delay={(i + 1) * 0.2} direction="left" fullWidth>
             <div className="h-[510px] relative flex-1 bg-[#C1D0E4] rounded-[50px] max-w-[500px]">
               <img
                 src={product.img}
@@ -58,7 +58,7 @@ const Products = () => {
                 </div>
               </div>
             </div>
-          </FadeIn>
+          </AnimateIt>
         ))}
       </div>
     </div>
