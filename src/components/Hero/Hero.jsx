@@ -77,7 +77,7 @@ const Hero = () => {
             </NavLink>
           </ul>
 
-          <img src={cartIcon} className="mt-8 mx-auto cursor-pointer" alt="" />
+          <img src={cartIcon} className="mt-8 mx-auto cursor-pointer" alt="cart" />
         </div>
       </div>
 
@@ -92,7 +92,7 @@ const Hero = () => {
             y: 0,
           }}
           transition={{ duration: 1.4 }}
-          className="mt-[90px] text-center text-6xl leading-tight xs:text-[64px] text-white max-w-[1050px]"
+          className="mt-[90px] text-center text-4xl md:text-6xl xl:text-7xl leading-tight xs:text-[64px] text-white max-w-[1050px]"
         >
           {heroTitle}
         </motion.h1>
