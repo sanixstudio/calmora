@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 // local imports
-import heroImage from "../../assets/hero-image.svg";
+import heroImage from "../../assets/hero-image.png";
 import logo from "../../assets/logo.svg";
 import cartIcon from "../../assets/cart-icon.svg";
 import searchIcon from "../../assets/search-icon.svg";
