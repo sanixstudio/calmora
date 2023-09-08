@@ -1,4 +1,4 @@
-# Vite-React Calmora House Plants
+# ![alt text](./src/assets/logo.svg) Calmora - House Plants
 
 ## 1. Introduction
 
